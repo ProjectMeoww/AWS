@@ -26,7 +26,9 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local Tab = Window:CreateTab("EVENT", 4483362458) -- Title, Image
+local Tab = Window:CreateTab("Player", 4483362458) -- Title, Image
+
+local Tab = Window:CreateTab("Event", 4483362458) -- Title, Image
 
 local Section = Tab:CreateSection("EVENT")
 
@@ -40,12 +42,12 @@ local Toggle = Tab:CreateToggle({
 end   end,
 })
 
-local Input = Tab:CreateInput({
-   Name = "8x Hatch",
-   PlaceholderText = "Input Placeholder",
-   RemoveTextAfterFocusLost = false,
-   Callback = function(Text)
+local Toggle = Tab:CreateToggle({
+   Name = "8X Hatch",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
    while wait() do
-   game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EventService.RF.ClaimEgg:InvokeServer(8)
+   game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EventService.RF.ClaimEgg:InvokeServer(3)
 end   end,
 })
