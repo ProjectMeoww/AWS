@@ -39,3 +39,13 @@ local Toggle = Tab:CreateToggle({
    game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EventService.RF.ClaimEgg:InvokeServer(8)
 end   end,
 })
+
+local Input = Tab:CreateInput({
+   Name = "8x Hatch",
+   PlaceholderText = "Input Placeholder",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(Text)
+   while wait() do
+   game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EventService.RF.ClaimEgg:InvokeServer(8)
+end   end,
+})
